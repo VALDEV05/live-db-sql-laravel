@@ -10,6 +10,18 @@
 
     <section class="books">
         <h2>Our books</h2>
+        @forelse ($books as $book)
+
+            <div class="book">
+                <h4>{{$book->title}}</h4>
+                <div class="description">
+                    <p>{{$book->plot}}</p>
+                </div>
+            </div>
+            
+        @empty
+            
+        @endforelse
     </section>
 </div>
 @endsection
